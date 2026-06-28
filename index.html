@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akotech KFT — Your Solution Partner Since 2005</title>
+  <meta name="description" content="Customer oriented and economic solutions for CNC turning, milling, stamped, forged and die casting parts. Your solution partner since 2005." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1a1e;
+      --muted: #6b6b7b;
+      --accent: #d95f1a;
+      --border: #e2e2e8;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: "Inter", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+    }
+
+    .header-inner {
+      max-width: 80rem;
+      margin: 0 auto;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Inter Tight", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--fg);
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .badge {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.625rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.75rem;
+    }
+
+    main {
+      display: flex;
+      align-items: center;
+      padding: 4rem 1.5rem;
+    }
+
+    .content {
+      max-width: 80rem;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 900px) {
+      .content { grid-template-columns: 1fr 1fr; align-items: center; gap: 6rem; }
+    }
+
+    .eyebrow {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.6875rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: block;
+      width: 2rem;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-family: "Inter Tight", sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 0.92;
+      text-transform: uppercase;
+    }
+
+    h1 .accent { color: var(--accent); }
+
+    .desc {
+      margin-top: 2rem;
+      color: var(--muted);
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      max-width: 52ch;
+    }
+
+    .contact-block {
+      border: 1px solid var(--border);
+      padding: 2.5rem;
+    }
+
+    .contact-label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.625rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-item:last-child { margin-bottom: 0; }
+
+    .contact-item-label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.625rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .contact-item a, .contact-item span {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--fg);
+      text-decoration: none;
+    }
+
+    .contact-item a:hover { color: var(--accent); }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+
+    .sister-note {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.625rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .sister-note a { color: var(--accent); text-decoration: none; }
+    .sister-note a:hover { text-decoration: underline; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem;
+    }
+
+    .footer-inner {
+      max-width: 80rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.625rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">AKOTECH<span>.</span>KFT</a>
+      <div class="badge">SITE UNDER CONSTRUCTION</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="content">
+      <div>
+        <div class="eyebrow">Est. 2005 — Budapest, Hungary</div>
+        <h1>Your Solution Partner<br /><span class="accent">Since 2005.</span></h1>
+        <p class="desc">
+          We offer customer oriented and economic solutions for production of CNC turning and milling parts, supplying and giving service to the various industries with stamped, roll formed, forging and die casting parts, special alloyed, metal and similar technical parts. Additional to the CNC machines in own house, thanks to our wide supplier network we also can meet requirements of various technical parts.
+        </p>
+      </div>
+
+      <div class="contact-block">
+        <div class="contact-label">// Get in touch</div>
+
+        <div class="contact-item">
+          <span class="contact-item-label">Email</span>
+          <a href="mailto:info@akotech-kft.com">info@akotech-kft.com</a>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="sister-note">
+          <span>A sister company of</span>
+          <a href="https://www.akomek.com" target="_blank" rel="noopener">AKOMEK.COM</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">&copy; 2025 Akotech KFT. All rights reserved.</span>
+      <span class="footer-copy">Budapest, Hungary</span>
+    </div>
+  </footer>
+
+</body>
+</html>
